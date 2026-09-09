@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.venv/
+env/
+venv/
+ENV/
+
+# PyInstaller build outputs
+build/
+dist/*.exe
+!dist/
+*.spec
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local diagnostic scratch scripts
+test_*.py
+scan_tv.py
+diagnose_webos.py
+inspect_*.py
+calibrate_*.py
+find_button_centers.py
+update_photorealistic_assets.py
+process_theme_assets.py
+extract_remote_image.py
+clean_remote_image.py
+get_sw_info.py
