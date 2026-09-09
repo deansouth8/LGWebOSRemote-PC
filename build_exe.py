@@ -5,8 +5,11 @@ import sys
 def build():
     print("Building LG WebOS Remote standalone .exe...")
     
-    # Path to PyInstaller executable inside .venv
-    pyinstaller_bin = os.path.join(".venv", "Scripts", "pyinstaller.exe")
+    # Path to PyInstaller executable (fallback to PATH if not in local .venv)
+    pyinstaller_bin = "pyinstaller"
+    venv_pyinstaller = os.path.join(".venv", "Scripts", "pyinstaller.exe")
+    if os.path.exists(venv_pyinstaller):
+        pyinstaller_bin = venv_pyinstaller
     
     cmd = [
         pyinstaller_bin,
